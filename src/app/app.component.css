@@ -1,22 +1,56 @@
-/* Estilos básicos para el componente principal */
+/* Estilos generales de la navegación */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto de difuminado de fondo */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
 
-nav {
-    background-color: #f8f9fa;
-    padding: 10px;
+/* Estilo de los enlaces de navegación */
+.nav-link {
+  color: #ffffff; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  margin: 0 0.5rem; /* Espaciado entre los enlaces */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+/* Colores específicos para cada enlace */
+.nav-link.capture {
+  background-color: rgba(255, 99, 132, 0.7); /* Color de fondo para Formulario */
+}
+
+.nav-link.dashboard {
+  background-color: rgba(54, 162, 235, 0.7); /* Color de fondo para Dashboard */
+}
+
+.nav-link.map {
+  background-color: rgba(75, 192, 192, 0.7); /* Color de fondo para Mapa */
+}
+
+/* Efecto hover para los enlaces */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo al pasar el ratón */
+  color: #000000; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Disposición en columna en pantallas pequeñas */
+    align-items: stretch; /* Estirar los enlaces */
   }
-  
-  nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #007bff;
+
+  .nav-link {
+    margin: 0.25rem 0; /* Espaciado vertical entre enlaces */
+    text-align: center; /* Alinear texto al centro */
   }
-  
-  nav a.active {
-    font-weight: bold;
-  }
-  
-  router-outlet {
-    display: block;
-    padding: 20px;
-  }
-  
+}
