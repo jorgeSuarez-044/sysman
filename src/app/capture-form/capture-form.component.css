@@ -1,0 +1,38 @@
+/* Puedes agregar estilos personalizados aquí */
+
+form {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+  }
+  
+  div {
+    margin-bottom: 1em;
+  }
+  
+  label {
+    margin-bottom: .5em;
+    color: #333333;
+    display: block;
+  }
+  
+  input {
+    border: 1px solid #CCCCCC;
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  button {
+    padding: 0.7em;
+    color: #FFFFFF;
+    background-color: #007BFF;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

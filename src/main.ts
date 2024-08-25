@@ -1,6 +1,11 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
+import { AppConfig } from './app/app.config'; // Importa AppConfig
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Crear una instancia de AppConfig
+const appConfig = new AppConfig();
+
+// Pasar AppConfig a la configuración del módulo (esto puede no ser necesario, dependiendo de tu configuración)
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch(err => console.error(err));

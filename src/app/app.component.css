@@ -1,0 +1,22 @@
+/* Estilos básicos para el componente principal */
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  
+  router-outlet {
+    display: block;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,17 @@
+/* Estilos básicos para el contenedor del mapa */
+
+#map {
+    width: 100%;
+    height: 500px;
+  }
+  .chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .chart {
+    width: 100%;
+    max-width: 800px;
+  }
+  

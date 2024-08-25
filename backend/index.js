@@ -10,14 +10,13 @@ const pool = new Pool({
   user: 'jorgeleonardosuarezcortes',
   host: 'localhost',
   database: 'web_stats',
-  password: '', // Si tienes una contraseña, colócala aquí
+  password: '', 
   port: 5432,
 });
 
 app.use(cors());
 app.use(bodyParser.json());
 
-// Ruta para guardar datos
 app.post('/api/data', async (req, res) => {
   const { siteName, visits, loadTime, bounceRate, latitude, longitude } = req.body;
   try {
@@ -34,7 +33,7 @@ app.post('/api/data', async (req, res) => {
   }
 });
 
-// Ruta para obtener datos del dashboard
+
 app.get('/api/statistics', async (req, res) => {
   try {
     const query = `

@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sysman';
+  constructor(private http: HttpClient) {}
+
+  onSubmit(form: any): void {
+    const data = form.value;
+    console.log(data);
+
+    // Aquí podrías agregar la lógica para enviar los datos a tu API usando HttpClient
+    this.http.post('http://localhost:3000/api/data', data).subscribe(response => {
+      console.log('Datos enviados', response);
+    }, error => {
+      console.error('Error al enviar los datos', error);
+    });
+  }
 }
